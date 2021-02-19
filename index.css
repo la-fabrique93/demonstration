@@ -1,0 +1,387 @@
+/*
+    ################################################################################
+    ##########
+    ##########              Les mobiles en portrait uniquement
+    ##########
+    ################################################################################
+    ################################################################################
+    ##########
+    ##########
+    ##########
+    ################################################################################
+*/
+@media (max-width: 1080px) and (orientation: portrait){
+
+body{
+    height:             100vh;
+    width:              100vw;
+    margin:             auto;
+    display:            flex;
+        flex-direction:     column;
+        flex-wrap:          wrap;
+        justify-content:    space-around;
+        align-content:      center;
+}
+
+/*
+################################################################################
+##########
+##########              Menu de sélection
+##########
+################################################################################
+*/
+a{
+        width:              80%;
+        height:             10%;
+        padding:            5% 0;
+        text-decoration:    none;
+        border:             solid black 5px;
+        font-family:        "Home Education";
+        text-align:         center;
+        color:              black;
+        margin-bottom:      3%;
+
+}  
+
+#nouveautes, #menu{
+        display:            flex;
+        flex-direction:     column;
+        flex-wrap:          nowrap;
+        justify-content:    space-around;
+        align-items:      center;
+        height:             30%;
+        width:              100%;
+        font-size:          3em;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+
+a.cryptoregna           {background-color:rgba(217, 205, 229, 0.6);}
+a.cryptoregna:hover     {background-color:rgba(217, 205, 229, 0.8);}
+    
+a.lyres                 {background-color:rgba(217, 205, 229, 0.6);}
+a.lyres:hover           {background-color:rgba(217, 205, 229, 0.8);}
+
+a.ephemere              {background-color:rgba(217, 205, 229, 0.6);}
+a.ephemere:hover        {background-color:rgba(217, 205, 229, 0.8);}
+
+
+a.images            {background-color:rgba(65, 245, 56, 0.6);}
+a.images:hover      {background-color:rgba(65, 245, 56, 0.8);}
+
+a.modeles3d         {background-color:rgba(0, 153, 255, 0.6);}
+a.modeles3d:hover   {background-color:rgba(0, 153, 255, 0.8);}
+
+a.photographie        {background-color:rgba(255, 64, 0, 0.6);}
+a.photographie:hover  {background-color:rgba(255, 64, 0, 0.8);}
+
+
+/*
+    ################################################################################
+    ##########
+    ##########              Animation
+    ##########
+    ################################################################################
+    ################################################################################
+    ##########
+    ##########
+    ##########
+    ################################################################################
+*/
+
+html::before,
+html::after,
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: .5vmin;
+  height: .5vmin;
+  border-radius: 50%;
+  color: transparent;
+}
+
+
+h1 {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+position: absolute;
+    z-index:      -1;
+}
+
+h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -26vmin;
+  left: -30vmin;
+  width: 62vmin;
+  height: 62vmin;
+  border-radius: 50%;
+  border: 1.3vmin solid currentColor;
+  box-sizing: border-box;
+}
+
+em {
+  font-family: 'Josefin Sans', sans-serif;
+  color: currentColor;
+  font-size: 15vmin;
+  position: relative;
+  font-style: normal;
+  width: 20vmin;
+  text-align: center;
+}
+
+em.planet {
+  -webkit-animation: planet-rotate 4s linear infinite;
+  animation: planet-rotate 4s linear infinite;
+  position: relative;
+}
+
+em.planet::before {
+  content: "";
+  position: absolute;
+  top: -.5vmin;
+  left: 3.5vmin;
+  z-index: -1;
+  width: 13vmin;
+  height: 13vmin;
+  border-radius: 50%;
+  background: white;
+}
+
+em.planet.right {
+  -webkit-transform-origin: -20vmin 5vmin;
+  transform-origin: -20vmin 5vmin;
+}
+
+@-webkit-keyframes planet-rotate {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+@keyframes planet-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/*
+################################################################################
+##########
+##########              Polices d'écriture
+##########
+################################################################################
+*/
+@font-face 
+    {
+       font-family: "Home Education";
+       src: url("Home Education.otf");
+    }
+}
+
+/*
+    ################################################################################
+    ##########
+    ##########              Tous les autres écrans
+    ##########
+    ################################################################################
+    ################################################################################
+    ##########
+    ##########
+    ##########
+    ################################################################################
+*/
+@media (min-width: 1080px), (orientation: landscape){
+body{
+    height:             90vh;
+    width:              100vw;
+    margin:             auto;
+}
+
+/*
+    ################################################################################
+    ##########
+    ##########              Animation
+    ##########
+    ################################################################################
+    ################################################################################
+    ##########
+    ##########
+    ##########
+    ################################################################################
+*/
+
+html::before,
+html::after,
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: .5vmin;
+  height: .5vmin;
+  border-radius: 50%;
+  color: transparent;
+}
+
+
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  height: 12vmin;
+  width: 120vmin;
+  display: flex;
+  justify-content: center;
+  position: relative;
+    z-index: -1;
+}
+
+h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -26vmin;
+  left: -20vmin;
+  width: 62vmin;
+  height: 62vmin;
+  border-radius: 50%;
+  border: 1.3vmin solid currentColor;
+  box-sizing: border-box;
+}
+
+em {
+  font-family: 'Josefin Sans', sans-serif;
+  color: currentColor;
+  font-size: 15vmin;
+  position: relative;
+  font-style: normal;
+  width: 20vmin;
+  text-align: center;
+}
+
+em.planet {
+  -webkit-animation: planet-rotate 4s linear infinite;
+  animation: planet-rotate 4s linear infinite;
+  position: relative;
+}
+
+em.planet::before {
+  content: "";
+  position: absolute;
+  top: -.5vmin;
+  left: 3.5vmin;
+  z-index: -1;
+  width: 13vmin;
+  height: 13vmin;
+  border-radius: 50%;
+  background: white;
+}
+
+em.planet.right {
+  -webkit-transform-origin: -20vmin 5vmin;
+  transform-origin: -20vmin 5vmin;
+}
+
+@-webkit-keyframes planet-rotate {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+@keyframes planet-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+/*
+################################################################################
+##########
+##########              Menu de sélection
+##########
+################################################################################
+*/
+a{
+        width:              25%;
+        padding: 			5% 0;
+        text-decoration:    none;
+        z-index:            2;
+        border:             solid black 5px;
+        font-family:        "Home Education";
+        text-align:         center;
+        color:              black;
+}  
+
+#nouveautes{
+        display:            flex;
+        flex-direction:     row;
+        flex-wrap:          wrap;
+        justify-content:    space-around;
+        align-content:      space-around;
+        height:             30%;
+        width:              100%;
+        font-size:          3em;
+        margin-top:         3%;
+}
+
+a.cryptoregna           {background-color:rgba(217, 205, 229, 0.6);}
+a.cryptoregna:hover     {background-color:rgba(217, 205, 229, 0.8);}
+    
+a.lyres                 {background-color:rgba(217, 205, 229, 0.6);}
+a.lyres:hover           {background-color:rgba(217, 205, 229, 0.8);}
+
+a.ephemere              {background-color:rgba(217, 205, 229, 0.6);}
+a.ephemere:hover        {background-color:rgba(217, 205, 229, 0.8);}
+
+
+
+#menu{
+        display:            flex;
+        flex-direction:     row;
+        flex-wrap:          wrap;
+        justify-content:    space-around;
+        align-content:      space-around;
+        height: 			30%;
+        width:              100%;
+        font-size:          5em;
+        margin-top:         5%;
+
+}
+a.images            {background-color:rgba(65, 245, 56, 0.6);}
+a.images:hover      {background-color:rgba(65, 245, 56, 0.8);}
+
+a.modeles3d         {background-color:rgba(0, 153, 255, 0.6);}
+a.modeles3d:hover   {background-color:rgba(0, 153, 255, 0.8);}
+
+a.photographie        {background-color:rgba(255, 64, 0, 0.6);}
+a.photographie:hover  {background-color:rgba(255, 64, 0, 0.8);}
+}
+
+
+
+
+/*
+################################################################################
+##########
+##########              Polices d'écriture
+##########
+################################################################################
+*/
+@font-face 
+	{
+	   font-family: "Home Education";
+	   src: url("Home Education.otf");
+	}
+}
